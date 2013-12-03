@@ -1,4 +1,11 @@
 NciApp::Application.routes.draw do
+  
+  # get "static/splash"
+  
+  resources :users
+  resources :sessions, only: [:new, :create, :destroy]
+  root to: "statics#splash"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
